@@ -12,6 +12,8 @@ django-extensions = "*"
 djangorestframework = "*"
 gunicorn = "*"
 django-heroku = "*"
+django-phone-field = "*"
+django-phonenumber-field = {extras = ["phonenumbers"],version = "*"}
 
 [requires]
 python_version = "3.7"

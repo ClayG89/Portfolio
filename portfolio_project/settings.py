@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_extensions',
-    'portfolio_app'
+    'portfolio_app',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'port',
-        'USER': 'portuser',
+        'USER': 'port_user',
         'PASSWORD': 'port',
         'HOST': 'localhost'
     }

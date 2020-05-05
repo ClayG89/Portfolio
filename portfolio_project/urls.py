@@ -13,13 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import path, include, re_path
 from django.contrib import admin
-from django.urls import path
 from . import views
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.FrontendAppView.as_view()), #New URL for the index route
+    path('', views.FrontendAppView.as_view()),
     path('api/v1/', include('portfolio_app.urls')),
-    re_path(r'^.*$', views.FrontendAppView.as_view()), #Says search Frontend for all other routes, so refreshing doesn't make the deployed page error
+    re_path(r'^.*$', views.FrontendAppView.as_view()),
 ]
