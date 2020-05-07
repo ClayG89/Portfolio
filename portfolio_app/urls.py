@@ -10,5 +10,5 @@ router.register('contacts', views.ContactView)
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
 ]

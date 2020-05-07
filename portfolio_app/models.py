@@ -10,10 +10,10 @@ class Blog(models.Model):
         return self.title
 
 class Comment(models.Model):
+    body = models.CharField(max_length=200)
+    name = models.CharField(max_length=40, default="name")
     blog = models.ForeignKey(
         Blog, on_delete=models.CASCADE, related_name='comments')
-    body = models.CharField(max_length=200)
-    name = models.CharField(max_length=40)
     
 
     def __str__(self):

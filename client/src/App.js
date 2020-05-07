@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import BlogList from "./components/BlogList";
 import Blog from "./components/Blog";
 import CommentList from "./components/CommentList";
@@ -21,24 +21,24 @@ class App extends Component {
 
                   <Switch>
                     
-                    <Route exact path="/" component={Home} />
+                    <Route exact path="/" component={ Home }/>
 
-                    <Route exact path="/blog" component={BlogList} />
+                    <Route exact path="/blog" component={ BlogList }/>
 
-                    <Route path="/blog/:id" component={Blog} />
+                    <Route path="/blog/:id" component={ Blog }/>
 
-                    <Route exact path="/contact" component={ContactList} />
+                    <Route exact path="/contact" component={ ContactList }/>
 
-                    <Route path="/contact/:id" component={Contact} />
+                    <Route path="/contact/:id" component={ Contact }/>
 
-                    <Route exact path="/comment" component={CommentList} />
+                    <Route exact path="/comment" component={ CommentList }/>
 
-                    <Route path="/comment/:id" component={Comment} />
+                    <Route path="/comment/:id" component={ Comment }/>
 
                   </Switch>
               </div>
           </Router>
-      );
+      )
   }
 }
 
