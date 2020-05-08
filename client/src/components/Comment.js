@@ -7,6 +7,7 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 export default class Comment extends Component {
         state = {
+            blog: [],
             comment: {},
             comments: [],  
         }
@@ -22,22 +23,22 @@ export default class Comment extends Component {
                 const commentResponse = await axios.get(`/api/v1/comments/${commentId}/?format=json`)
                 this.setState({
                     comment: commentResponse.data,
-                    
+                    blog: commentResponse.blogs,
                 })
             }
             catch (error) {
                 console.log(error)
                 this.setState({error: error.message})
             }
-            console.log(this.componentDidMount)
+            
         }
       
         
     render() {
         return (
             <div>
-                {/* <h3>{this.state.comment.name}</h3>
-                <p>{this.state.comment.body}</p> */}
+                <h3>{this.state.comment.name}</h3>
+                <p>{this.state.comment.body}</p>
             </div>
         )
     }

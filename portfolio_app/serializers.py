@@ -10,7 +10,7 @@ class BlogSerializer(serializers.ModelSerializer):
     comments = CommentSerializer(many=True, read_only=True)
     class Meta:
         model = Blog
-        fields = ('id', 'title', 'blog', 'comments')
+        fields = ('id', 'title', 'comments', 'post')
 
 
 class ContactSerializer(serializers.ModelSerializer):

@@ -16,7 +16,7 @@ export default class Blog extends Component {
 componentDidMount() {
     const blogId = this.props.match.params.id;
     this.fetchBlog(blogId)
-   
+    
 }
 
 fetchBlog = async (blogId) => {
@@ -34,17 +34,33 @@ fetchBlog = async (blogId) => {
 }
 
 render() {
+    // console.log(this.state.comments)
     return (
         <div> 
+
+           
             <div>          
                 <h2>{this.state.blog.title}</h2>
-                <p>{this.state.blog.blog}</p>
             </div> 
             <div>
+                <p>{this.state.blog.post}</p>
+            </div>
+            
+            <div>
                 <h2>Comments</h2>
-                <CommentList />
-                {/* <Comment /> */}
             </div> 
+            <div>
+                {this.state.comments.map(comment => (
+                    <div key={ comment.id }>
+                        <h4>{ comment.name }</h4>
+                        <p>{ comment.body }</p>
+                    </div>
+                ))}
+                <div>
+                    <CommentList />
+                </div>
+            </div>
+            
         </div>
     );
 }
