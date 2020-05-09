@@ -11,16 +11,7 @@ export default class ContactList extends Component {
     state = {
         error: '',
         contactlist: [],
-        newContact: {
-            firstname: '',
-            lastname: '',
-            company: '',
-            phone: '',
-            email: '',
-            topic: '',
-            message: '',
-        }
-
+        newContact: {}
     }
     getContactList = () => {
         axios.get('/api/v1/contacts/').then((response) => {
@@ -37,10 +28,10 @@ export default class ContactList extends Component {
         });
     }
     updateContactList = (event) => {
-        const updatedNewContact = { ...this.state.newContact };
-        updatedNewContact[event.target.name] = event.target.value;
+        const updatedNewContactList = { ...this.state.newContact };
+        updatedNewContactList[event.target.name] = event.target.value;
         this.setState({
-            newContact: updatedNewContact,
+            newContact: updatedNewContactList,
         });
     }
     submitCreateContactList = (event) => {
@@ -49,6 +40,7 @@ export default class ContactList extends Component {
             this.toggleCreateForm();
             this.getContactList();
         });
+        console.log(this.state.newContact)
     }
     componentDidMount() {
         this.getContactList()
@@ -76,31 +68,31 @@ export default class ContactList extends Component {
                 <form onSubmit={this.updateContactList}>
                     <div>
                         <h4>First Name</h4>
-                        <input type="text" name="firstname" />
+                        <input type="text" name="firstname" onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>Last Name</h4>
-                        <input type="text" name="lastname" />
+                        <input type="text" name="lastname" onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>Company</h4>
-                        <input type="text" name="company" />
+                        <input type="text" name="company" onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>Phone</h4>
-                        <input type="tel" name="phone" />
+                        <input type="tel" name="phone" onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>email</h4>
-                        <input type="email" name="email" />
+                        <input type="email" name="email" onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>Subject</h4>
-                        <input type="text" name="topic" />
+                        <input type="text" name="topic" onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>Message</h4>
-                        <textarea className="textarea" name="message" placeholder="Add a comment"></textarea>
+                        <textarea className="textarea" name="message" placeholder="Add a comment" onChange={this.updateContactList}></textarea>
                     </div>
 
 

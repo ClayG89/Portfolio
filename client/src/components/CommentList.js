@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+// import Comment from './Comment'
 // import { Link } from 'react-router-dom'
 
 axios.defaults.xsrfCookieName = 'csrftoken'
@@ -50,37 +51,19 @@ export default class CommentList extends Component {
         render() {
             return (
                 <div>
-
-
-
-                    <div>
-{/* 
-                        {
-                            this.state.comments.map(comment => (
-
-                                    <div key={comment.id}>
-                                        <div>
-                                            <h4>{comment.name}</h4>
-                                        </div>
-                                        <div>
-                                            <p>{comment.body}</p>
-                                        </div>
-                                    </div>
-                                )
-                                
-                            )} */}
-                        
+                    <div>                        
                     </div>
                     <h3>Comment Here</h3>
-                    <form onSubmit={this.updateComment}>
+                   
+                    <form onSubmit={this.updateCommentList}>
                         <div>
-                            <input type="text" name="name" placeholder="Your name" onChange={this.updateComment} />
+                            <input type="text" name="name" placeholder="Your name" onChange={this.updateCommentList} />
                         </div>
                         <div>
-                            <textarea className="textarea" name="body" placeholder="Add a comment" onChange={this.updateComment}></textarea>
+                            <textarea className="textarea" name="body" placeholder="Add a comment" onChange={this.updateCommentList}></textarea>
                         </div>
 
-                        <button onClick={this.submitCreateComment}>Submit</button>
+                        <button onClick={this.submitCreateCommentList}>Submit</button>
 
                     </form>
                 </div>
