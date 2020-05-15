@@ -80,11 +80,12 @@ export default class ContactList extends Component {
                     </div>
                     <div>
                         <h4>Phone</h4>
-                        <input type="tel" name="phone" onChange={this.updateContactList} />
+                        <p>please place +1 before number</p>
+                        <input type="tel" name="phone"  defaultValue="+1" onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>email</h4>
-                        <input type="email" name="email" onChange={this.updateContactList} />
+                        <input type="email" name="email"  onChange={this.updateContactList} />
                     </div>
                     <div>
                         <h4>Subject</h4>

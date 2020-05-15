@@ -51,21 +51,7 @@ export default class CommentList extends Component {
         render() {
             return (
                 <div>
-                    <div>                        
-                    </div>
-                    <h3>Comment Here</h3>
-                   
-                    <form onSubmit={this.updateCommentList}>
-                        <div>
-                            <input type="text" name="name" placeholder="Your name" onChange={this.updateCommentList} />
-                        </div>
-                        <div>
-                            <textarea className="textarea" name="body" placeholder="Add a comment" onChange={this.updateCommentList}></textarea>
-                        </div>
-
-                        <button onClick={this.submitCreateCommentList}>Submit</button>
-
-                    </form>
+                      
                 </div>
             )
         }

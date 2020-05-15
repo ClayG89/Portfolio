@@ -16,7 +16,7 @@ class App extends Component {
               <div className="App">
 
                   <div>
-                      <h1>Portfolio</h1>
+                      
                   </div>
 
                   <Switch>
