@@ -14,10 +14,10 @@ export default class Blog extends Component {
 
     state = {
         blog: [],
-        blogs: [],
+        // blogs: [],
         comments: [],
         newComment: {
-            blog: 1,
+        //    blog: '',
         },
     }
 
@@ -34,7 +34,7 @@ export default class Blog extends Component {
                 blog: blogResponse.data,
                 comments: blogResponse.data.comments,
             })
-            console.log(blogId)
+            // console.log(blogId)
         }
         catch (error) {
             console.log(error)
@@ -56,15 +56,14 @@ export default class Blog extends Component {
             showCreateForm: newShowCreateForm,
         });
     }
-
+    
     updateCommentList = (event) => {
-        const updatedNewComment = { ...this.state.newComment };
-        updatedNewComment[event.target.name] = event.target.value;       
+        const blog =  this.props.match.params.id;
+        const updatedNewComment = { ...this.state.newComment, blog };        
+        updatedNewComment[event.target.name] = event.target.value;   
         this.setState({
-            newComment: updatedNewComment,
-            
-           
-        });
+            newComment: updatedNewComment,     
+        }); 
     }
     submitCreateCommentList = (event) => {
         event.preventDefault();
@@ -73,13 +72,7 @@ export default class Blog extends Component {
             this.getCommentList();
         });
     }
-    // submitCreateBlog = (event) => {
-    //     event.preventDefault();
-    //     axios.post('/api/v1/blogs/', this.state.newComment).then(() => {
-    //         this.toggleCreateForm();
-    //         this.getCommentList();
-    //     });
-    // }
+   
 
 
     render() {
@@ -121,14 +114,14 @@ export default class Blog extends Component {
                                 onClick={this.updateCommentList} />
                                 {this.state.blog.title} 
                             </div> */}
-
                             <div>
                                 <input
                                     type="text"
                                     name="name"
                                     placeholder="Your name"
-                                    onFocus={this.updateCommentList} />
+                                    onChange={this.updateCommentList} />
                             </div>
+                            
                             <div>
                                 <textarea
                                     className="textarea"
