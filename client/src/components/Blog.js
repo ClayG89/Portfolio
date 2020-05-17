@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-// import CommentList from './CommentList';
-// import Comment from './Comment'
+
 
 
 
@@ -14,10 +13,8 @@ export default class Blog extends Component {
 
     state = {
         blog: [],
-        // blogs: [],
         comments: [],
         newComment: {
-        //    blog: '',
         },
     }
 
@@ -34,7 +31,6 @@ export default class Blog extends Component {
                 blog: blogResponse.data,
                 comments: blogResponse.data.comments,
             })
-            // console.log(blogId)
         }
         catch (error) {
             console.log(error)
