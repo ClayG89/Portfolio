@@ -1,18 +1,47 @@
-.App {
-  text-align: center;
+.homewrapper {
+  display: grid;
+  width: 95%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+.home3 {
+  background-color: blue;
+  grid-column: span 3;
+}
+.logowrapper {
+  font-family:'Nanum Gothic', sans-serif;
+  font-size: 30px;
+}
+.logoinit {
+  background-color: yellow;
+  width: 100px;
+}
+.logofn {
+  background-color: green;
+  width: 200px;
+}
+.logoln {
+  background-color: red;
+  width: 200px;
 }
 
-.App-logo {
+/* .App {
+  text-align: center;
+} */
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
+} */
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,7 +51,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
