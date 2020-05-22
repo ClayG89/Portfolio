@@ -1,31 +1,64 @@
 .homewrapper {
   display: grid;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr .5fr;
+  background-image: url('/Portfolioimg.jpeg');
+  background-size: cover;
 }
 .home3 {
-  background-color: blue;
+  
   grid-column: span 3;
 }
 .logowrapper {
   font-family:'Nanum Gothic', sans-serif;
-  font-size: 30px;
 }
 .logoinit {
-  background-color: yellow;
-  width: 100px;
+  width: 120px;
+  font-size: 38px;
+  color: white;
+  position: relative;
+  left: 40px;
+  background-color: rgb(163, 163, 201, 0.5);
+  text-align: center;
+  border:7px solid white;
 }
 .logofn {
-  background-color: green;
+ font-size: 30px;
   width: 200px;
+  position: absolute;
+  top: 25px;
+  left: 255px;
+  color: white;
 }
 .logoln {
-  background-color: red;
+  font-size: 30px;
   width: 200px;
+  position: absolute;
+  top: 54px;
+  left: 255px;
+  color: white; 
 }
-
+.homenav {
+ display: grid;
+ width: 100%;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-column: span 1.5;
+ margin-top: 3em;
+ text-align: center;
+}
+.homenav a {
+  color: white;
+  font-size: 25px;
+  font-family:'Nanum Gothic', sans-serif;
+  text-decoration: none;
+  
+}
+.home4 {
+  font-size: 25px;
+  color: white;
+}
 /* .App {
   text-align: center;
 } */

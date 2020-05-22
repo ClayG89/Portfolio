@@ -16,9 +16,19 @@ export default class Home extends Component {
                 </div>
                 </div>
 
-                <div className="home2">Navbar</div>
+                <div className="homenav">
+
+                    <nav><div><a href="/About">About Me</a></div></nav>
+                    <nav><div><a href="/Blog">Blog</a></div></nav>  
+                    <nav><div><a href="/Contact">Contact Me</a></div></nav>
+                    <nav><div><a href="/Projects">Projects</a></div></nav>  
+                        
+                   
+                </div>
                 <div className="home3">main</div>
-                <div className="home4">footer</div>   
+                <div className="home4">
+                    <p>footer</p>
+                </div>   
             </div>
         )
     }
