@@ -1,9 +1,13 @@
 import logging
 import os
-
+from django.shortcuts import render
 from django.views.generic import View
 from django.http import HttpResponse
 from django.conf import settings
+from . import urls
+from  portfolio_app.models import Blog
+
+
 
 class FrontendAppView(View):
     """

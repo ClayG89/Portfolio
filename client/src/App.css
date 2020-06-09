@@ -1,9 +1,10 @@
 .homewrapper {
   display: grid;
-  width: 90%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr .5fr;
+  grid-template-rows: 1fr 3fr 1fr;
   background-image: url('/Portfolioimg.jpeg');
   background-size: cover;
   background-position: center;
@@ -28,7 +29,7 @@
   width: 200px;
   position: absolute;
   top: 27px;
-  left: 247px;
+  left: 167px;
   color: white;
 }
 .logoln {
@@ -36,7 +37,7 @@
   width: 200px;
   position: absolute;
   top: 56px;
-  left: 247px;
+  left: 167px;
   color: white; 
 }
 .homenav {
@@ -129,8 +130,9 @@ a:hover {
 .blogListWrapper {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 5fr 1 fr;
-  width: 90%;
+  grid-template-rows: 1fr 3fr 1fr;
+  width: 100%;
+  height: 100%;
   background-image: url('/Portfolioimg.jpeg');
   background-size: cover;
   background-position: center;
@@ -168,15 +170,17 @@ a:hover {
 }
 .blogListLink { 
   display: grid;
-  height: 550px;
+  height: 500px;
   width: 22%;
   margin-left: 2em;
   margin-bottom: 2em;
-  /* width: 30%; */
   border: white solid 2px;
+  font-size: 25px;
   background-color: rgb(163, 163, 201, 0.1);
   background-size: 200px 500px;
   text-align: center;
+  /* overflow: hidden;
+  overflow-y: scroll; */
 }
 .blogListLink a {
   color: white;
@@ -229,33 +233,70 @@ a:hover {
   left: 475px;
   animation: appear2 29s alternate infinite;
 }
-
-/* .App {
+.blogWrapper {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-rows: .5fr 3fr  1fr .5fr;
+}
+.blogheader {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-image: url('/Portfolioimg.jpeg');
+  background-size: cover;
+  background-position: center;
+  /* grid-column: span 4; */
+}
+.blogNav {
+  display: grid;
+  width: 75%;
+  height: 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column: span 1.5;
+  margin-top: 4.5em;
+  padding: 0;
   text-align: center;
-} */
-
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-/* 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(163, 163, 201, 0.7);
+  background-size: 300px 100px;
+}
+.blogNav a {
   color: white;
-} */
+  font-size: 25px;
+  font-family:'Nanum Gothic', sans-serif;
+  text-decoration: none; 
+  padding-top: 20px;
+}
+.blogMain {
+  font-family: 'Nanum Gothic', sans-serif;
+  /* text-align: center; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.blogTitle {
+  font-family: 'Rock Salt', cursive;
+  font-size: 28px;
+}
+.blog {
+  font-size: 18px;
+  padding: 3em;
+  
+}
+.blogPost {
+  width: 650px;
+  height: 530px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.enteredComments {
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.image1 {
+  margin-left: 2em;
+}
 
 .App-link {
   color: #61dafb;
@@ -268,4 +309,38 @@ a:hover {
   to {
     transform: rotate(360deg);
   }
+}
+.formWrapper {
+  background-color: rgb(14, 14, 14);
+  color: white;
+  font-family:'Nanum Gothic', sans-serif;
+}
+fieldset {
+  padding: 20px;
+  margin: 20px 0;
+  border: 5px solid #222;
+}
+legend {
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+.nameInput {
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+}
+.textArea {
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+  
+}
+button {
+  background-color: red;
+  color: white;
+  margin: 10px;
+}
+.enteredComments {  
+  padding: 20px;
 }

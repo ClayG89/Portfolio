@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+import axios from 'axios'
+// import { renderToStaticMarkup } from 'react-dom/server'
+// import parse, { domToReact } from 'html-react-parser'
+// import { Link, RichText, Date } from 'prismic-reactjs';
 
 
 
@@ -52,14 +55,14 @@ export default class Blog extends Component {
             showCreateForm: newShowCreateForm,
         });
     }
-    
+
     updateCommentList = (event) => {
-        const blog =  this.props.match.params.id;
-        const updatedNewComment = { ...this.state.newComment, blog };        
-        updatedNewComment[event.target.name] = event.target.value;   
+        const blog = this.props.match.params.id;
+        const updatedNewComment = { ...this.state.newComment, blog };
+        updatedNewComment[event.target.name] = event.target.value;
         this.setState({
-            newComment: updatedNewComment,     
-        }); 
+            newComment: updatedNewComment,
+        });
     }
     submitCreateCommentList = (event) => {
         event.preventDefault();
@@ -68,71 +71,83 @@ export default class Blog extends Component {
             this.getCommentList();
         });
     }
-   
+
 
 
     render() {
 
         return (
-            <div>
+            <div className="blogWrapper">
 
+                <div className="blogheader">
 
-                <div>
-                    <h2>{this.state.blog.title}</h2>
-                </div>
-                <div>
-                    <p>{this.state.blog.post}</p>
-                </div>
-
-                <div>
-                    <h2>Comments</h2>
-                </div>
-
-                <div>
-                    {this.state.comments.map(comment => (
-                        <div key={comment.id}>
-                            <h4>{comment.name}</h4>
-                            <p>{comment.body}</p>
+                    <div className="logowrapper">
+                        <div className="logoinit">
+                            <h1>CG</h1>
                         </div>
-                    ))}
-
-                    <div>
-
-                        <h3>Comment Here</h3>
-
-                        <form onSubmit={this.updateCommentList}>
-
-                            
-                            {/* <div>
-                                <input
-                                name='blog'
-                                value={this.state.blog.id}
-                                onClick={this.updateCommentList} />
-                                {this.state.blog.title} 
-                            </div> */}
-                            <div>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Your name"
-                                    onChange={this.updateCommentList} />
-                            </div>
-                            
-                            <div>
-                                <textarea
-                                    className="textarea"
-                                    name="body"
-                                    placeholder="Add a comment"
-                                    onChange={this.updateCommentList}></textarea>
-                            </div>
-
-                            <button onClick={this.submitCreateCommentList}>Submit</button>
-
-                        </form>
-
+                        <div className="logofn">
+                            <h4>Clayborn</h4>
+                        </div>
+                        <div className="logoln">
+                            <h4>Guess</h4>
+                        </div>
+                    </div>
+                    <div className="blogNav">
+                        <nav><div><a href="/About">About Me</a></div></nav>
+                        <nav><div><a href="/">Home</a></div></nav>
+                        <nav><div><a href="/Contact">Contact Me</a></div></nav>
+                        <nav><div><a href="/Projects">Projects</a></div></nav>
                     </div>
                 </div>
+                <div className="blogMain">
 
+                    <div className="image1">
+                        <img src="/testphoto1.jpeg" width="350" alt="self"></img>
+                    </div>
+                    <div className="blog">
+                        <div className="blogTitle">
+                            <h2>{this.state.blog.title}</h2>
+                        </div>
+
+                        <div id="blogpost" className="blogPost">
+                            <div dangerouslySetInnerHTML={{ __html: this.state.blog.post }} />
+                        </div>
+
+                    </div>
+                    <div className="formWrapper">
+                        <form onSubmit={this.updateCommentList}>
+                            <fieldset>
+                                <legend>Comment Here</legend>
+                                <div className="nameInput">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Your name"
+                                        onChange={this.updateCommentList} />
+                                </div>
+                                <div className="textArea">
+                                    <textarea
+                                        className="textarea"
+                                        name="body"
+                                        placeholder="Add a comment"
+                                        onChange={this.updateCommentList}></textarea>
+                                </div>
+                                <button onClick={this.submitCreateCommentList}>Submit</button>
+                            </fieldset>
+                        </form>
+
+
+                        <div className="enteredComments">
+                            <h2>Comments</h2>
+                            {this.state.comments.map(comment => (
+                                <div key={comment.id}>
+                                    <h4>{comment.name}</h4>
+                                    <p>{comment.body}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

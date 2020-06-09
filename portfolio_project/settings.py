@@ -16,6 +16,11 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REACT_APP_DIR = os.path.join(BASE_DIR, 'client')
 
+STATIC_URL = '/static/' 
+STATIC_ROOT = '/home/mysite/static/'
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = 'media/'
+
 STATICFILES_DIRS = [
     os.path.join(REACT_APP_DIR, 'build', 'static')
 ]
@@ -43,8 +48,15 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_extensions',
     'portfolio_app',
-    'phonenumber_field'
+    'phonenumber_field',
+    'ckeditor',
+    'ckeditor_uploader',
+    'tinymce',
+    'django_filters',
+    'djrichtextfield'
 ]
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -61,7 +73,7 @@ ROOT_URLCONF = 'portfolio_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/macbookpro/ga-sei/Portfolio-django-react/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,3 +143,14 @@ STATIC_URL = '/static/'
 
 import django_heroku
 django_heroku.settings(locals())
+
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],
+    'init_template': 'djrichtextfield/init/tinymce.js',
+    'settings': {
+        'menubar': False,
+        'plugins': 'link image',
+        'toolbar': 'bold italic | link image | removeformat',
+        'width': 700
+    }
+}

@@ -1,10 +1,13 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from djrichtextfield.models import RichTextField
+from django.db import models
+from tinymce.models import HTMLField
 
 # Create your models here.
 class Blog(models.Model):
     title = models.CharField(max_length=255)
-    post = models.CharField(max_length=5000)
+    post = HTMLField(max_length=5000)
 
     def __str__(self):
         return self.title
