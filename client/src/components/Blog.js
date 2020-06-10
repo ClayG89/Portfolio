@@ -147,6 +147,24 @@ export default class Blog extends Component {
                             ))}
                         </div>
                     </div>
+                   
+                        <div className="icons2">
+                            <div><p>© Background image courtesy of Travis Clark</p></div>
+                            <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
+                            <div className="facebookIcon">
+                                <img src="/facebook-icon.png" width="35px" alt=""></img>
+                            </div>
+                            <div className="linkedinIcon">
+                                <img src="/linkedin-icon.jpg" width="35px" alt=""></img>
+                            </div>
+                            <div className="instagramIcon">
+                                <img src="/instagram-icon.png" width="35px" alt=""></img>
+                            </div>
+                            <div className="twitterIcon">
+                                <img src="/twitter-icon.png" width="35px" alt=""></img>
+                            </div>
+                        </div>
+                    
                 </div>
             </div>
         );
