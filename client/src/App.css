@@ -4,10 +4,15 @@
   height: 100%;
   margin: 0 auto;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr .2fr;
   background-image: url('/Portfolioimg.jpeg');
   background-size: cover;
   background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .logowrapper {
   font-family:'Nanum Gothic', sans-serif;
@@ -366,14 +371,212 @@ button {
 .enteredComments {  
   padding: 20px;
 }
-::-webkit-scrollbar {width: 20px;
+::-webkit-scrollbar {width: 16px;
 
 }
 
-::-webkit-scrollbar-track {background-color: rgb(20, 20, 20);;border-radius: 2px;
+::-webkit-scrollbar-track {background-color: rgb(20, 20, 20);;border-radius: 3px;
 
 }
 
-::-webkit-scrollbar-thumb {background-color: rgb(35, 35, 60);border-radius: 2px;
+::-webkit-scrollbar-thumb {background-color: rgb(35, 35, 60);border-radius: 3px; width: 14px;
 
+}
+
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Portfolioimg.jpeg');
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.contactNav {
+  display: grid;
+  width: 75%;
+  height: 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column: span 1.5;
+  margin-top: 4.5em;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(163, 163, 201, 0.7);
+  background-size: 300px 100px;
+}
+.contactNav a {
+  color: white;
+  font-size: 25px;
+  font-family:'Nanum Gothic', sans-serif;
+  text-decoration: none; 
+  padding-top: 20px;
+}
+.contactTitle {
+  font-size: 30px;
+  font-family:'Nanum Gothic', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: grid;
+  grid-column: span 2;
+}
+form {
+  display: grid;
+  grid-column: span 2;
+}
+.formWrapper2 {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: 1fr 1fr;
+  /* background-color: rgb(0, 0, 0, 0.5); */
+}
+.columnWrapper {
+  display: grid;
+  text-align: center;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+ grid-column: span 4;
+ /* margin-left: 4em; */
+ border-radius: 4px;
+ border: solid rgb(255, 255, 255) 1px;
+}
+.firstName {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.lastName {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.subject {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.company {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.email {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.phone {
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.textArea2 {
+  display: grid;
+  grid-column: span 4;
+  text-align: center;
+  width: 50%;
+  height: 200px;
+  padding: 4em;
+  min-width: 60px;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.firstNameField {
+  width: 300px;
+  height: 25px;
+  /* border: 3px solid rgb(163, 163, 201); */
+  border-radius: 4px;
+}
+.lastNameField {
+  width: 300px;
+  height: 25px;
+  /* border: 3px solid rgb(163, 163, 201); */
+  border-radius: 4px;
+}
+.subjectField {
+  width: 300px;
+  height: 25px;
+  /* border: 3px solid rgb(163, 163, 201); */
+  border-radius: 4px;
+}
+.companyField {
+  width: 300px;
+  height: 25px;
+  /* border: 3px solid rgb(163, 163, 201); */
+  border-radius: 4px;
+}
+.emailField {
+  width: 300px;
+  height: 25px;
+  /* border: 3px solid rgb(163, 163, 201); */
+  border-radius: 4px;
+}
+.phoneField {
+  width: 300px;
+  height: 25px;
+  /* border: 3px solid rgb(163, 163, 201); */
+  border-radius: 4px;
+}
+.warning {
+  font-size: 16px;
+  color: white;
+  animation: vibrate .7s alternate infinite;
+}
+@keyframes vibrate {
+  0% {
+    color:rgba(255, 255, 255, 0.6);
+  }
+100% {
+  color: rgb(255, 69, 0, 0.6);
+  }
+}
+/* @keyframes vibrate2 {
+  from{transform: translate(0);}
+  to{transform: color(red) translate(100%);}
+} */
+input[name="firstname"],
+input[name="lastname"],
+input[name="topic"],
+input[name="company"],
+input[name="email"],
+input[name="phone"] {
+  /* color: white; */
+  /* background-color: rgb(163, 163, 201, 0.5); */
+  font-size: 16px;
+  font-weight: 500;
+}
+.contactButton button {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
 }

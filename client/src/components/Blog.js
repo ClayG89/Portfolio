@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+
 // import { renderToStaticMarkup } from 'react-dom/server'
 // import parse, { domToReact } from 'html-react-parser'
 // import { Link, RichText, Date } from 'prismic-reactjs';
@@ -105,8 +106,15 @@ export default class Blog extends Component {
                         <img src="/testphoto1.jpeg" width="350" alt="self"></img>
                     </div>
                     <div className="blog">
-                        <div className="blogTitle">
-                            <h2>{this.state.blog.title}</h2>
+                        <div className="align">
+                            <div className="back">
+                                <a href="/Blog">
+                                    <img src="/backbutton5.jpeg" width="55" height="45" alt="back"></img>
+                                </a>
+                                <div className="blogTitle">
+                                    <h2>{this.state.blog.title}</h2>
+                                </div>
+                            </div>
                         </div>
 
                         <div id="blogpost" className="blogPost">
@@ -147,24 +155,24 @@ export default class Blog extends Component {
                             ))}
                         </div>
                     </div>
-                   
-                        <div className="icons2">
-                            <div><p>© Background image courtesy of Travis Clark</p></div>
-                            <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
-                            <div className="facebookIcon">
-                                <img src="/facebook-icon.png" width="35px" alt=""></img>
-                            </div>
-                            <div className="linkedinIcon">
-                                <img src="/linkedin-icon.jpg" width="35px" alt=""></img>
-                            </div>
-                            <div className="instagramIcon">
-                                <img src="/instagram-icon.png" width="35px" alt=""></img>
-                            </div>
-                            <div className="twitterIcon">
-                                <img src="/twitter-icon.png" width="35px" alt=""></img>
-                            </div>
+
+                    <div className="icons2">
+                        <div><p>© Background image courtesy of Travis Clark</p></div>
+                        <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
+                        <div className="facebookIcon">
+                            <img src="/facebook-icon.png" width="35px" alt=""></img>
                         </div>
-                    
+                        <div className="linkedinIcon">
+                            <img src="/linkedin-icon.jpg" width="35px" alt=""></img>
+                        </div>
+                        <div className="instagramIcon">
+                            <img src="/instagram-icon.png" width="35px" alt=""></img>
+                        </div>
+                        <div className="twitterIcon">
+                            <img src="/twitter-icon.png" width="35px" alt=""></img>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         );
