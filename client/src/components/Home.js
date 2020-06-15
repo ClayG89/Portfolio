@@ -17,13 +17,10 @@ export default class Home extends Component {
                 </div>
 
                 <div className="homenav">
-
                     <nav><div><a href="/About">About Me</a></div></nav>
                     <nav><div><a href="/Blog">Blog</a></div></nav>
                     <nav><div><a href="/Contact">Contact Me</a></div></nav>
                     <nav><div><a href="/Projects">Projects</a></div></nav>
-
-
                 </div>
                 <div className="brandStatement1">
                     <div className="quote1">

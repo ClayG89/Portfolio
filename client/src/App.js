@@ -7,6 +7,7 @@ import Comment from "./components/Comment";
 import ContactList from "./components/ContactList";
 import Contact from  "./components/Contact";
 import Home from "./components/Home";
+import Projects from "./components/Projects"
 import "./App.css";
 
 // document.querySelector('#blogPost').innerHTML = ""
@@ -36,6 +37,8 @@ class App extends Component {
                     <Route exact path="/comment" component={ CommentList }/>
 
                     <Route path="/comment/:id" component={ Comment }/>
+
+                    <Route exact path="/projects" component={ Projects }/>
 
                   </Switch>
               </div>

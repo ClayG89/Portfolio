@@ -66,15 +66,19 @@ export default class Blog extends Component {
         });
     }
     submitCreateCommentList = (event) => {
+        let txt = "";
         event.preventDefault();
         axios.post('/api/v1/comments/', this.state.newComment).then(() => {
             this.toggleCreateForm();
             this.getCommentList();
+            document.getElementById("myForm").reset();
+            document.getElementById("myForm").innerHTML = txt;
+            // window.location.replace('/blog');
+            
         });
     }
-
-
-
+    
+   
     render() {
 
         return (
@@ -101,7 +105,6 @@ export default class Blog extends Component {
                     </div>
                 </div>
                 <div className="blogMain">
-
                     <div className="image1">
                         <img src="/testphoto1.jpeg" width="350" alt="self"></img>
                     </div>
@@ -116,14 +119,12 @@ export default class Blog extends Component {
                                 </div>
                             </div>
                         </div>
-
                         <div id="blogpost" className="blogPost">
                             <div dangerouslySetInnerHTML={{ __html: this.state.blog.post }} />
                         </div>
-
                     </div>
                     <div className="formWrapper">
-                        <form onSubmit={this.updateCommentList}>
+                        <form id="myForm" onSubmit={this.updateCommentList}>
                             <fieldset>
                                 <legend>Comment Here</legend>
                                 <div className="nameInput">
@@ -143,8 +144,6 @@ export default class Blog extends Component {
                                 <button onClick={this.submitCreateCommentList}>Submit</button>
                             </fieldset>
                         </form>
-
-
                         <div className="enteredComments">
                             <h2>Comments</h2>
                             {this.state.comments.map(comment => (
@@ -155,7 +154,6 @@ export default class Blog extends Component {
                             ))}
                         </div>
                     </div>
-
                     <div className="icons2">
                         <div><p>© Background image courtesy of Travis Clark</p></div>
                         <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>

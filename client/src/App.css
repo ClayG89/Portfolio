@@ -102,6 +102,9 @@ a:hover {
   grid-column: span 3;
   background-color: rgb(0, 0, 0, 0.5);
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   /* height: 40px; */
 }
 .icons2 {
@@ -579,4 +582,45 @@ input[name="phone"] {
   height: 30px;
   font-size: 20px;
   letter-spacing: 0.1em;
+}
+.projectWrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 0.5fr 3.3fr 0.2fr;
+  background-image: url('/Portfolioimg.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.projectTitle {
+  display: grid;
+  grid-column: span 2;
+  font-size: 30px;
+  font-family:'Nanum Gothic', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.projectImageWrapper {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: 1fr 1fr;
+}
+.projectImage1 {
+  text-align: center;
+}
+.projectImage2 {
+  text-align: center;
+}
+.projectImage3 {
+  text-align: center;
+}
+.projectImage4 {
+  text-align: center;
 }

@@ -35,10 +35,17 @@ export default class ContactList extends Component {
         });
     }
     submitCreateContactList = (event) => {
+        // let txt = "";
         event.preventDefault();
         axios.post('/api/v1/contacts/', this.state.newContact).then(() => {
             this.toggleCreateForm();
             this.getContactList();
+            document.getElementById("myForm2").reset();
+            setTimeout("location.href= '/';" ,alert('Submitted successfully'));
+            // window.location.replace('/');
+            // document.getElementById("myForm2").innerHTML = txt; 
+              
+            
         });
         console.log(this.state.newContact)
     }
@@ -69,7 +76,7 @@ export default class ContactList extends Component {
                     <h2>Contact Me</h2>
                 </div>
 
-                <form onSubmit={this.updateContactList}>
+                <form  id="myForm2" onSubmit={this.updateContactList}>
                         <div className="columnWrapper">
                     <div className="formWrapper2">
                             <div className="columnWrapper1">
