@@ -17,7 +17,7 @@ export default class Home extends Component {
                 </div>
 
                 <div className="homenav">
-                    <nav><div><a href="/About">About Me</a></div></nav>
+                    <nav><div><a href="/About_me">About Me</a></div></nav>
                     <nav><div><a href="/Blog">Blog</a></div></nav>
                     <nav><div><a href="/Contact">Contact Me</a></div></nav>
                     <nav><div><a href="/Projects">Projects</a></div></nav>
@@ -35,6 +35,7 @@ export default class Home extends Component {
                 <div className="icons">
                     <div><p>© Background image courtesy of Travis Clark</p></div>
                     <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
+                    <div><p>claybornguess@yahoo.com</p></div>
                     <div className="facebookIcon">
                         <img src="/facebook-icon.png" width="35px" alt=""></img>
                     </div>

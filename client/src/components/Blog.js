@@ -98,7 +98,7 @@ export default class Blog extends Component {
                         </div>
                     </div>
                     <div className="blogNav">
-                        <nav><div><a href="/About">About Me</a></div></nav>
+                        <nav><div><a href="/About_me">About Me</a></div></nav>
                         <nav><div><a href="/">Home</a></div></nav>
                         <nav><div><a href="/Contact">Contact Me</a></div></nav>
                         <nav><div><a href="/Projects">Projects</a></div></nav>

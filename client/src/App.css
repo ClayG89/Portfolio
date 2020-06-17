@@ -96,7 +96,7 @@ a:hover {
    
 .icons {
   display: grid;
-  grid-template-columns: 4fr 4fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 4fr 1fr 1fr 1fr 1fr 1fr;
   font-size: 15px;
   color: white;
   grid-column: span 3;
@@ -109,7 +109,7 @@ a:hover {
 }
 .icons2 {
   display: grid;
-  grid-template-columns: 4fr 4fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 4fr 1fr 1fr 1fr 1fr;
   font-size: 15px;
   color: white;
   grid-column: span 3;
@@ -615,12 +615,55 @@ input[name="phone"] {
 .projectImage1 {
   text-align: center;
 }
+.projectImage1 img {
+  border: solid white 5px;
+  border-radius: 8px;
+}
 .projectImage2 {
   text-align: center;
+}
+.projectImage2 img {
+  border: solid white 5px;
+  border-radius: 8px;
 }
 .projectImage3 {
   text-align: center;
 }
 .projectImage4 {
   text-align: center;
+}
+.aboutWrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 0.5fr 3.3fr 0.2fr;
+  background-image: url('/Portfolioimg.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.aboutNav {
+  display: grid;
+  width: 75%;
+  height: 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column: span 1.5;
+  margin-top: 4.5em;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(163, 163, 201, 0.7);
+  background-size: 300px 100px;
+}
+.aboutNav a {
+  color: white;
+  font-size: 25px;
+  font-family:'Nanum Gothic', sans-serif;
+  text-decoration: none; 
+  padding-top: 20px;
 }

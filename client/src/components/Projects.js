@@ -16,20 +16,20 @@ export default class Projects extends Component {
                     </div>
                 </div>
                 <div className="homenav">
-                    <nav><div><a href="/About">About Me</a></div></nav>
+                    <nav><div><a href="/">Home</a></div></nav>
+                    <nav><div><a href="/About_me">About Me</a></div></nav>
                     <nav><div><a href="/Blog">Blog</a></div></nav>
                     <nav><div><a href="/Contact">Contact Me</a></div></nav>
-                    <nav><div><a href="/Projects">Projects</a></div></nav>
                 </div>
                 <div className="projectTitle">
                     <h1>Projects</h1>
                 </div>
                 <div className="projectImageWrapper">
                     <div className="projectImage1">
-                        <img src="https://via.placeholder.com/350x200" alt="pic"></img>
+                        <img src="/jeopardy-image.jpg" alt="pic" width="400" height="250"></img>
                     </div>
                     <div className="projectImage2">
-                        <img src="https://via.placeholder.com/350x200" alt="pic"></img>
+                        <img src="/Project2-Homepage.png" alt="pic" width="400" height="250"></img>
                     </div>
                     <div className="projectImage3">
                         <img src="https://via.placeholder.com/350x200" alt="pic"></img>

@@ -115,6 +115,7 @@ export default class ContactList extends Component {
                 <div className="icons">
                     <div><p>© Background image courtesy of Travis Clark</p></div>
                     <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
+                    <div><p>claybornguess@yahoo.com</p></div>
                     <div className="facebookIcon">
                         <img src="/facebook-icon.png" width="35px" alt=""></img>
                     </div>
