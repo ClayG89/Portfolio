@@ -40,8 +40,8 @@ export default class ContactList extends Component {
         axios.post('/api/v1/contacts/', this.state.newContact).then(() => {
             this.toggleCreateForm();
             this.getContactList();
-            document.getElementById("myForm2").reset();
-            setTimeout("location.href= '/';" ,alert('Submitted successfully'));
+            // document.getElementById("myForm2").reset();
+            setTimeout(alert('Submitted successfully'), window.location.replace('/'));
             // window.location.replace('/');
             // document.getElementById("myForm2").innerHTML = txt; 
               

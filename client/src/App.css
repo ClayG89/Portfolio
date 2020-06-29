@@ -324,9 +324,12 @@ a:hover {
 }
 .enteredComments {
   width: 350px;
-  height: 300px;
+  height: 620px;
   overflow: hidden;
   overflow-y: scroll;
+  background-color: rgb(35, 35, 60);
+  color: white;
+  border: solid rgb(20, 20, 20) 7px;
 }
 
 .App-link {
@@ -629,8 +632,16 @@ input[name="phone"] {
 .projectImage3 {
   text-align: center;
 }
+.projectImage3 img {
+  border: solid white 5px;
+  border-radius: 8px;
+}
 .projectImage4 {
   text-align: center;
+}
+.projectImage4 img {
+  border: solid white 5px;
+  border-radius: 8px;
 }
 .aboutWrapper {
   display: grid;

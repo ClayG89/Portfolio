@@ -26,16 +26,16 @@ export default class Projects extends Component {
                 </div>
                 <div className="projectImageWrapper">
                     <div className="projectImage1">
-                        <img src="/jeopardy-image.jpg" alt="pic" width="400" height="250"></img>
+                        <img src="/jeopardy-image.jpg" alt="pic" width="350" height="200"></img>
                     </div>
                     <div className="projectImage2">
-                        <img src="/Project2-Homepage.png" alt="pic" width="400" height="250"></img>
+                        <img src="/Project2-Homepage.png" alt="pic" width="350" height="200"></img>
                     </div>
                     <div className="projectImage3">
-                        <img src="https://via.placeholder.com/350x200" alt="pic"></img>
+                        <img src="/Clay's.png" alt="pic" width="350" height="200" ></img>
                     </div>
                     <div className="projectImage4">
-                        <img src="https://via.placeholder.com/350x200" alt="pic"></img>
+                        <img src="/Project4_Homepage.png" alt="pic" width="350" height="200"></img>
                     </div>
                 </div>
                 <div className="icons">
