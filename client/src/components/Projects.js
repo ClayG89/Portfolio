@@ -26,34 +26,36 @@ export default class Projects extends Component {
                 </div>
                 <div className="projectImageWrapper">
                     <div className="projectImage1">
-                        <img src="/jeopardy-image.jpg" alt="pic" width="350" height="200"></img>
+                        <img src="/jeopardy-image.jpg" alt="pic" width="250" height="150"></img>
                     </div>
                     <div className="projectImage2">
-                        <img src="/Project2-Homepage.png" alt="pic" width="350" height="200"></img>
+                        <img src="/Project2-Homepage.png" alt="pic" width="250" height="150"></img>
                     </div>
                     <div className="projectImage3">
-                        <img src="/Clay's.png" alt="pic" width="350" height="200" ></img>
+                        <img src="/Clay's.png" alt="pic" width="250" height="150" ></img>
                     </div>
                     <div className="projectImage4">
-                        <img src="/Project4_Homepage.png" alt="pic" width="350" height="200"></img>
+                        <a href="https://project4c.herokuapp.com/">
+                            <img src="/Project4_screenshot.png" alt="pic" width="250" height="150"></img>
+                        </a>
                     </div>
                 </div>
                 <div className="icons">
-                        <div><p>© Background image courtesy of Travis Clark</p></div>
-                        <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
-                        <div className="facebookIcon">
-                            <img src="/facebook-icon.png" width="35px" alt=""></img>
-                        </div>
-                        <div className="linkedinIcon">
-                            <img src="/linkedin-icon.jpg" width="35px" alt=""></img>
-                        </div>
-                        <div className="instagramIcon">
-                            <img src="/instagram-icon.png" width="35px" alt=""></img>
-                        </div>
-                        <div className="twitterIcon">
-                            <img src="/twitter-icon.png" width="35px" alt=""></img>
-                        </div>
+                    <div><p>© Background image courtesy of Travis Clark</p></div>
+                    <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
+                    <div className="facebookIcon">
+                        <img src="/facebook-icon.png" width="35px" alt=""></img>
                     </div>
+                    <div className="linkedinIcon">
+                        <img src="/linkedin-icon.jpg" width="35px" alt=""></img>
+                    </div>
+                    <div className="instagramIcon">
+                        <img src="/instagram-icon.png" width="35px" alt=""></img>
+                    </div>
+                    <div className="twitterIcon">
+                        <img src="/twitter-icon.png" width="35px" alt=""></img>
+                    </div>
+                </div>
             </div>
         )
     }
