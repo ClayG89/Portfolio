@@ -9,5 +9,8 @@
     "html-react-parser": "^0.13.0",
     "nodemon": "^2.0.4",
     "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
   }
 }
