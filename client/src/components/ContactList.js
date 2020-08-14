@@ -43,9 +43,7 @@ export default class ContactList extends Component {
             // document.getElementById("myForm2").reset();
             setTimeout(alert('Submitted successfully'), window.location.replace('/'));
             // window.location.replace('/');
-            // document.getElementById("myForm2").innerHTML = txt; 
-              
-            
+            // document.getElementById("myForm2").innerHTML = txt;         
         });
         console.log(this.state.newContact)
     }
