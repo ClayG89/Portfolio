@@ -1,69 +1,71 @@
-.homewrapper {
+.homeContainer {
   display: grid;
+  grid-template-rows: 3.5fr 1.3fr .1fr;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr .5fr 1fr;
+  background-color: black;
   width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr .2fr;
-  background-image: url('/Portfolioimg.jpeg');
-  background-size: cover;
-  background-position: center;
+  grid-column: span 3;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  z-index: 999;
 }
-.logowrapper {
-  font-family:'Nanum Gothic', sans-serif;
-}
-.logoinit {
-  width: 120px;
-  font-size: 38px;
-  color: white;
-  position: relative;
-  left: 40px;
-  background-color: rgb(163, 163, 201, 0.7);
-  text-align: center;
-  border-radius: 10%;
-  /* border:7px solid white; */
-  margin-top: 1em;
-}
-.logofn {
-  font-size: 30px;
-  width: 200px;
-  position: absolute;
-  top: 27px;
-  left: 167px;
-  color: white;
-}
-.logoln {
-  font-size: 30px;
-  width: 200px;
-  position: absolute;
-  top: 56px;
-  left: 167px;
-  color: white; 
-}
-.homenav {
+.navBar1 {
   display: grid;
-  width: 75%;
-  height: 20%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column: span 1.5;
-  margin-top: 4.5em;
-  padding: 0;
-  text-align: center;
-  background-color: rgb(163, 163, 201, 0.7);
-  background-size: 300px 100px;
+  grid-template-rows: 1fr 1fr;
+  border-top: solid 3px rgb(170, 170, 185);
+  margin-top: 50px;
 }
-.homenav a { 
-  color: white;
-  font-size: 25px;
-  font-family:'Nanum Gothic', sans-serif;
+.navBar1 a {
+  float: left;
   text-decoration: none; 
-  padding-top: 20px;
-  /* vertical-align: -50px; */
+  margin-left: 50px;
+  margin-top: 10px;
+  padding-right: 10px;
+  font-size: 25px;
+  color: white;
+}
+.bar1Top{
+  height: 15%;
+}
+.bar1Bottom {
+  color: white;
+  background-color: rgb(170, 170, 185);
+}
+.logo1 {
+  /* margin-top: .4em; */
+  border: solid 1px rgb(170, 170, 185);
+  text-align: center;
+  background-color: rgb(170, 170, 185);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.logo1 img {
+  border-radius: 4px;
+}
+.navBar2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border-top: solid 3px rgb(170, 170, 185);
+  margin-top: 50px;
+}
+.navBar2 a {
+  float: left;
+  text-decoration: none; 
+  margin-left: 50px;
+  margin-top: 10px;
+  padding-right: 10px;
+  font-size: 25px;
+  color: white;
+}
+.bar2Top{
+  height: 15%;
+}
+.bar2Bottom {
+  color: white;
+  background-color: rgb(170, 170, 185);
 }
 a:hover {
   transition: .5s;
@@ -71,13 +73,18 @@ a:hover {
   border-radius: 10%;
 }
 .brandStatement1 {
+  margin-top: 180px;
+  padding-top: 200px;
   grid-column: span 3;
+  background-image: url('/CG_background3.jpg');
+  background-size: cover;
+  background-position: center;
+
 }
 .quote1 {
-  margin-top: 7em;
   font-size: 20px;
   width: 380px;
-  /* background-color:rgb(163, 163, 201, 0.2); */
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(255, 255, 255) ;
   font-family:'Nanum Gothic', sans-serif;
   /* border: white solid 1px; */
@@ -93,7 +100,13 @@ a:hover {
     0%{opacity: 0;}
     100%{opacity: 1;}
   }
-   
+.aboutMe {
+  /* padding-top: px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(170, 170, 185);
+  grid-column: span 3;
+}
 .icons {
   display: grid;
   grid-template-columns: 3fr 4fr 1fr 1fr 1fr 1fr 1fr;
@@ -102,8 +115,8 @@ a:hover {
   grid-column: span 3;
   background-color: rgb(0, 0, 0, 0.5);
   text-align: center;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
+  /* bottom: 0; */
   width: 100%;
   /* height: 40px; */
 }
@@ -378,7 +391,7 @@ button {
   padding: 20px;
   max-height: 75%;
 }
-::-webkit-scrollbar {width: 16px;
+::-webkit-scrollbar {width: 10px;
 
 }
 
@@ -386,7 +399,7 @@ button {
 
 }
 
-::-webkit-scrollbar-thumb {background-color: rgb(35, 35, 60);border-radius: 3px; width: 14px;
+::-webkit-scrollbar-thumb {background-color: rgb(170, 170, 185);border-radius: 3px; width: 10px;
 
 }
 
