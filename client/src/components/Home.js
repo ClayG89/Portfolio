@@ -11,7 +11,7 @@ export default class Home extends Component {
                         <nav><div><a href="/Blog">Blog</a></div></nav>
                       </div>
                       <div className="bar1Bottom">
-                          <p>placeholder</p>
+                          <h3>Phone: 404-200-0678</h3>
                       </div>
                   </div>
                   <div className="logo1">
@@ -23,7 +23,7 @@ export default class Home extends Component {
                         <nav><div><a href="/Projects">Projects</a></div></nav>
                         </div>
                         <div className="bar2Bottom">
-                          <p>placeholder</p>
+                          <h3>Email: clay@claybornguess.com</h3>
                       </div>
                   </div>                    
                 </div>
@@ -39,16 +39,17 @@ export default class Home extends Component {
                 </div>
                 <div className="aboutMe">
                     <div className="bioPic">
-                        <img src="/testphoto1.jpeg" height="300" alt="test"/>
+                        <img src="/CG_bio2.jpg" height="500" alt="test"/>
                     </div>
                     <div className="bio">
-                        <p></p>
+                        <h3>Clay...</h3>
+                            <p>Clay is a full-stack softwart engineer skilled in both front-end and back-end development. He is a problem solver who is up for the challenge. His previous expereince as a business owner has given him the ability to focus under pressure and to understand the importance of deadlines. Currently he is working on a custom website that he created for a friend which will work as both a display gallery for her cosmetology business and an ecommerce site for her products.</p>
                     </div>
                 </div>
                 <div className="icons">
-                    <div><p>© Background image courtesy of Travis Clark</p></div>
+                    <div><p></p></div>
                     <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
-                    <div><p>claybornguess@yahoo.com</p></div>
+                    <div><p></p></div>
                     <div className="facebookIcon">
                         <img src="/facebook-icon.png" width="35px" alt=""></img>
                     </div>

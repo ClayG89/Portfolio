@@ -1,6 +1,6 @@
 .homeContainer {
   display: grid;
-  grid-template-rows: 3.5fr 1.3fr .1fr;
+  grid-template-rows: 2.1fr 1.3fr .1fr;
 }
 .header {
   display: grid;
@@ -33,6 +33,7 @@
 .bar1Bottom {
   color: white;
   background-color: rgb(170, 170, 185);
+  text-align: center;
 }
 .logo1 {
   /* margin-top: .4em; */
@@ -66,6 +67,7 @@
 .bar2Bottom {
   color: white;
   background-color: rgb(170, 170, 185);
+  text-align: center;
 }
 a:hover {
   transition: .5s;
@@ -107,13 +109,27 @@ a:hover {
   background-color: rgb(170, 170, 185);
   grid-column: span 3;
 }
+.aboutMe .bioPic {
+  padding: 2em;
+  text-align: center;
+}
+.bioPic img {
+  border-radius: 3px;
+}
+.bio {
+  margin-top: 1em;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 25px;
+  color: white;
+  max-width: 525px;
+}
 .icons {
   display: grid;
   grid-template-columns: 3fr 4fr 1fr 1fr 1fr 1fr 1fr;
   font-size: 12px;
   color: white;
   grid-column: span 3;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0);
   text-align: center;
   /* position: fixed; */
   /* bottom: 0; */
