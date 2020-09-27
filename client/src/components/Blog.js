@@ -74,56 +74,61 @@ export default class Blog extends Component {
             document.getElementById("myForm").reset();
             document.getElementById("myForm").innerHTML = txt;
             // window.location.replace('/blog');
-            
+
         });
     }
-    
-   
+
+
     render() {
 
         return (
             <div className="blogWrapper">
 
-                <div className="blogheader">
-
-                    <div className="logowrapper">
-                        <div className="logoinit">
-                            <h1>CG</h1>
+                <div className="header">
+                    <div className="navBar1">
+                        <div className="bar1Top">
+                            <nav><div><a href="/Resume">Resume</a></div></nav>
+                            <nav><div><a href="/">Home</a></div></nav>
                         </div>
-                        <div className="logofn">
-                            <h4>Clayborn</h4>
-                        </div>
-                        <div className="logoln">
-                            <h4>Guess</h4>
+                        <div className="bar1Bottom">
+                            <h3>Phone: 404-200-0678</h3>
                         </div>
                     </div>
-                    <div className="blogNav">
-                        <nav><div><a href="/About_me">About Me</a></div></nav>
-                        <nav><div><a href="/">Home</a></div></nav>
-                        <nav><div><a href="/Contact">Contact Me</a></div></nav>
-                        <nav><div><a href="/Projects">Projects</a></div></nav>
+                    <div className="logo1">
+                        <img src="/CG_Logo6.png" width="300" alt="Logo" />
+                    </div>
+                    <div className="navBar2">
+                        <div className="bar2Top">
+                            <nav><div><a href="/Contact">Contact Me</a></div></nav>
+                            <nav><div><a href="/Projects">Projects</a></div></nav>
+                        </div>
+                        <div className="bar2Bottom">
+                            <h3>Email: clay@claybornguess.com</h3>
+                        </div>
+                    </div>
+                </div>
+                <div className="image1">
+                    <div className="blogTitle">
+                        <h2>{this.state.blog.title}</h2>
                     </div>
                 </div>
                 <div className="blogMain">
-                    <div className="image1">
-                        <img src="/testphoto1.jpeg" width="350" alt="self"></img>
-                    </div>
                     <div className="blog">
                         <div className="align">
-                            <div className="back">
+                            {/* <div className="back">
                                 <a href="/Blog">
                                     <img src="/backbutton5.jpeg" width="55" height="45" alt="back"></img>
                                 </a>
-                                <div className="blogTitle">
-                                    <h2>{this.state.blog.title}</h2>
-                                </div>
-                            </div>
+                            </div> */}
                         </div>
+                        <div></div>
                         <div id="blogpost" className="blogPost">
                             <div dangerouslySetInnerHTML={{ __html: this.state.blog.post }} />
                         </div>
                     </div>
-                    <div className="formWrapper">
+                </div>
+                <div className="formWrapper">
+                    <div>
                         <form id="myForm" onSubmit={this.updateCommentList}>
                             <fieldset>
                                 <legend>Comment Here</legend>
@@ -144,34 +149,34 @@ export default class Blog extends Component {
                                 <button onClick={this.submitCreateCommentList}>Submit</button>
                             </fieldset>
                         </form>
-                        <div className="enteredComments">
-                            <h2>Comments</h2>
-                            {this.state.comments.map(comment => (
-                                <div key={comment.id}>
-                                    <h4>{comment.name}</h4>
-                                    <p>{comment.body}</p>
-                                </div>
-                            ))}
-                        </div>
                     </div>
-                    <div className="icons2">
-                        <div><p>© Background image courtesy of Travis Clark</p></div>
-                        <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
-                        <div className="facebookIcon">
-                            <img src="/facebook-icon.png" width="35px" alt=""></img>
-                        </div>
-                        <div className="linkedinIcon">
-                            <img src="/linkedin-icon.jpg" width="35px" alt=""></img>
-                        </div>
-                        <div className="instagramIcon">
-                            <img src="/instagram-icon.png" width="35px" alt=""></img>
-                        </div>
-                        <div className="twitterIcon">
-                            <img src="/twitter-icon.png" width="35px" alt=""></img>
-                        </div>
+                    <div className="enteredComments">
+                        <h2>Comments</h2>
+                        {this.state.comments.map(comment => (
+                            <div key={comment.id}>
+                                <h4>{comment.name}</h4>
+                                <p>{comment.body}</p>
+                            </div>
+                        ))}
                     </div>
-
                 </div>
+                <div className="icons2">
+                    <div><p>© Background image courtesy of Travis Clark</p></div>
+                    <div><p>Site created by Clayborn Guess using React, Django REST and PostgreSQL.</p></div>
+                    <div className="facebookIcon">
+                        <img src="/facebook-icon.png" width="35px" alt=""></img>
+                    </div>
+                    <div className="linkedinIcon">
+                        <img src="/linkedin-icon.jpg" width="35px" alt=""></img>
+                    </div>
+                    <div className="instagramIcon">
+                        <img src="/instagram-icon.png" width="35px" alt=""></img>
+                    </div>
+                    <div className="twitterIcon">
+                        <img src="/twitter-icon.png" width="35px" alt=""></img>
+                    </div>
+                </div>
+
             </div>
         );
     }

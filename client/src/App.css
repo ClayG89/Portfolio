@@ -1,6 +1,10 @@
 .homeContainer {
   display: grid;
-  grid-template-rows: 2.1fr 1.3fr .1fr;
+  grid-template-rows: 1.8fr 1fr .1fr;
+  background-image: url('/CG_background5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .header {
   display: grid;
@@ -78,10 +82,6 @@ a:hover {
   margin-top: 180px;
   padding-top: 200px;
   grid-column: span 3;
-  background-image: url('/CG_background3.jpg');
-  background-size: cover;
-  background-position: center;
-
 }
 .quote1 {
   font-size: 20px;
@@ -106,8 +106,10 @@ a:hover {
   /* padding-top: px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: rgb(170, 170, 185);
+  background-color: rgba(0, 0, 0, 0.6);
   grid-column: span 3;
+  border-top: solid 3px rgb(170, 170, 185);
+  border-bottom: solid 3px rgb(170, 170, 185);
 }
 .aboutMe .bioPic {
   padding: 2em;
@@ -115,12 +117,13 @@ a:hover {
 }
 .bioPic img {
   border-radius: 3px;
+  border: solid 3px rgb(170, 170, 185);;
 }
 .bio {
   margin-top: 1em;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 25px;
-  color: white;
+  color: rgb(170, 170, 185);
   max-width: 525px;
 }
 .icons {
@@ -129,7 +132,9 @@ a:hover {
   font-size: 12px;
   color: white;
   grid-column: span 3;
-  background-color: rgb(0, 0, 0);
+  /* background-image: url('/CG_background5.jpg'); */
+  background-size: cover;
+  background-position: center;
   text-align: center;
   /* position: fixed; */
   /* bottom: 0; */
@@ -142,11 +147,11 @@ a:hover {
   font-size: 12px;
   color: white;
   grid-column: span 3;
-  background-color: rgb(0, 0, 0, 0.9);
+  /* background-color: rgb(0, 0, 0, 0.9); */
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  /* position: fixed; */
+  /* bottom: 0;
+  width: 100%; */
   /* height: 40px; */
 }
 .facebookIcon {
@@ -179,72 +184,64 @@ a:hover {
 }
 .blogListWrapper {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr 1fr;
-  width: 100%;
-  height: 100%;
-  background-image: url('/Portfolioimg.jpeg');
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto;
+  /* width: 100%;
+  height: 100%; */
+  /* margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-}
-.blogListNav {
-  display: grid;
-  width: 75%;
-  height: 20%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column: span 1.5;
-  margin-top: 4.5em;
-  padding: 0;
-  text-align: center;
-  background-color: rgb(163, 163, 201, 0.7);
-  background-size: 300px 100px;
-}
-.blogListNav a {
-  color: white;
-  font-size: 25px;
-  font-family:'Nanum Gothic', sans-serif;
-  text-decoration: none; 
-  padding-top: 20px;
-}
-a:hover {
-  transition: 1s;
-  color: rgb(187, 136, 41);
-  border-radius: 10%;
+  bottom: 0; */
 }
 .blogListMain {
   display: grid;
+  grid-template-rows: 5fr .1fr;
   grid-column: span 3;
-  grid-row: span 3;
+  /* grid-row: span 3; */
+  margin-top: 180px;
   color: white;
+  background-image: url('/CG_background5.jpg');
+  background-position: center;
+  background-size: cover;
 }
 .blogListLink { 
   display: grid;
-  height: 500px;
-  width: 22%;
-  margin-left: 2em;
-  margin-bottom: 2em;
-  border: white solid 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .2fr 1fr 1fr 1fr 1fr;
+  /* height: 500px; */
+  /* width: 22%; */
+  margin: 2em;
+  /* border: white solid 2px; */
   font-size: 25px;
-  background-color: rgb(163, 163, 201, 0.1);
-  background-size: 200px 500px;
+  /* background-color: rgb(163, 163, 201, 0.1); */
+  background-size: cover;
   text-align: center;
+  margin-top: 35px;
   /* overflow: hidden;
   overflow-y: scroll; */
+}
+.blogListLink .title {
+  grid-column: span 3;
+}
+.blogListLink div:nth-child(11) {
+  background-image: url('/Cuba14.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 1em;
+  margin: 0em 1em 1em 1em;
+  height: 100px;
+  max-width: 300px;
+  border-radius: 3px;
 }
 .blogListLink a {
   color: white;
   font-size: 25px;
   font-family:'Nanum Gothic', sans-serif;
   text-decoration: none; 
-  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-.excerpt1 {
+/* .excerpt1 {
   font-family:'Nanum Gothic', sans-serif;
   font-size: 45px;
   max-width: 500px;
@@ -287,18 +284,17 @@ a:hover {
   top: 502px;
   left: 475px;
   animation: appear2 29s alternate infinite;
-}
+} */
 .blogWrapper {
   display: grid;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  grid-template-rows: .5fr 3.3fr  1fr;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  grid-template-rows: 1.4fr 5fr 2fr .1fr;
+  background-image: url('/CG_background5.jpg');
+  background-position: center;
+  background-size: cover;
+  background-image: url('/CG_background5.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .blogheader {
   display: grid;
@@ -308,7 +304,7 @@ a:hover {
   background-position: center;
   /* grid-column: span 4; */
 }
-.blogNav {
+/* .blogNav {
   display: grid;
   width: 75%;
   height: 20%;
@@ -326,30 +322,50 @@ a:hover {
   font-family:'Nanum Gothic', sans-serif;
   text-decoration: none; 
   padding-top: 20px;
-}
+} */
 .blogMain {
+  /* margin-top: 100px; */
   font-family: 'Nanum Gothic', sans-serif;
-  /* text-align: center; */
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  grid-column: span 3;
+  /* background-image: url('/CG_background5.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; */
+}
+.image1 {
+  background-image: url('/CG_blog3.jpg');
+  margin-top: 180px;
+  grid-column: span 3;
+  background-position: center;
+  background-size: cover;
 }
 .blogTitle {
+  text-align: right;
+  margin-right: 4em;
+  padding-top: 85px;
   font-family: 'Rock Salt', cursive;
-  font-size: 28px;
-
+  font-size: 42px;
+  color: white;
 }
 .blog {
-  font-size: 18px;
-  padding: 2em;
-  
+  display: grid;
+  grid-template-rows: .2fr 2fr;
+  text-align: center;
+  padding: 4em;
 }
 .blogPost {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 19px;
-  width: 700px;
-  height: 400px;
-  overflow: hidden;
-  overflow-y: scroll;
+  font-size: 28px;
+  color: white;
+  line-height: 1.3;
+  /* width: 750px;
+  height: 800px; */
+  /* overflow: hidden;
+  overflow-y: scroll; */
+}
+#blogpost #1 {
+  background-color: rgb(170, 170, 185);
 }
 .enteredComments {
   width: 350px;
@@ -374,9 +390,12 @@ a:hover {
   }
 }
 .formWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: rgb(20, 20, 20);
   color: white;
   font-family:'Nanum Gothic', sans-serif;
+  grid-column: span 3;
 }
 fieldset {
   padding: 20px;

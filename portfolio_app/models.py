@@ -7,7 +7,7 @@ from tinymce.models import HTMLField
 # Create your models here.
 class Blog(models.Model):
     title = models.CharField(max_length=255)
-    post = HTMLField(max_length=5000)
+    post = HTMLField(max_length=30000)
 
     def __str__(self):
         return self.title

@@ -39,7 +39,7 @@ export default class Home extends Component {
                 </div>
                 <div className="aboutMe">
                     <div className="bioPic">
-                        <img src="/CG_bio2.jpg" height="500" alt="test"/>
+                        <img src="/CG_bio2.jpg" height="450" alt="test"/>
                     </div>
                     <div className="bio">
                         <h3>Clay...</h3>
